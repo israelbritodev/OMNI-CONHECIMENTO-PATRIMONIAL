@@ -1,0 +1,1893 @@
+/* =========================================================
+   OMNI CONHECIMENTO PATRIMONIAL
+   IDENTIDADE VISUAL
+   ========================================================= */
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   VARIÁVEIS DA IDENTIDADE
+   ========================================================= */
+
+:root {
+
+    --azul-omni: #173b63;
+    --azul-escuro: #0f2945;
+    --azul-claro: #eaf2f9;
+
+    --fundo: #f4f6fa;
+    --branco: #ffffff;
+
+    --texto: #172033;
+    --texto-secundario: #64748b;
+
+    --borda: #e2e8f0;
+
+    --vermelho: #dc2626;
+    --vermelho-claro: #fff1f2;
+
+    --verde: #15803d;
+    --verde-claro: #f0fdf4;
+
+    --sombra:
+        0 8px 25px rgba(15, 41, 69, 0.07);
+
+    --sombra-hover:
+        0 14px 30px rgba(15, 41, 69, 0.11);
+
+    --raio: 16px;
+}
+
+
+/* =========================================================
+   BODY
+   ========================================================= */
+
+body {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: var(--fundo);
+
+    color: var(--texto);
+
+    min-height: 100vh;
+
+    -webkit-font-smoothing: antialiased;
+}
+
+
+/* =========================================================
+   CABEÇALHO
+   ========================================================= */
+
+.topbar {
+
+    height: 84px;
+
+    background: var(--branco);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding:
+        0 6%;
+
+    border-bottom:
+        1px solid var(--borda);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+
+}
+
+
+/* LOGO */
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    font-size: 21px;
+
+    font-weight: 700;
+
+    color: var(--azul-omni);
+
+    letter-spacing: 0.2px;
+
+}
+
+
+/* IMAGEM DA LOGO */
+
+.logo img {
+
+    height: 52px;
+
+    width: auto;
+
+    max-width: 90px;
+
+    object-fit: contain;
+
+}
+
+
+/* NOME DO SISTEMA */
+
+.logo span {
+
+    line-height: 1.2;
+
+}
+
+
+/* =========================================================
+   USUÁRIO
+   ========================================================= */
+
+.usuario {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: var(--texto);
+
+    font-size: 16px;
+
+}
+
+
+/* NOME */
+
+.nome-usuario {
+
+    font-weight: 500;
+
+}
+
+
+/* AVATAR */
+
+.avatar-usuario {
+
+    width: 38px;
+
+    height: 38px;
+
+    border-radius: 50%;
+
+    background:
+        var(--azul-omni);
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-weight: 700;
+
+    font-size: 15px;
+
+}
+
+
+/* =========================================================
+   CONTAINER PRINCIPAL
+   ========================================================= */
+
+.container {
+
+    width: 86%;
+
+    max-width: 1180px;
+
+    margin:
+        55px auto;
+
+}
+
+
+/* =========================================================
+   DASHBOARD
+   ========================================================= */
+
+.boas-vindas {
+
+    margin-bottom: 10px;
+
+}
+
+
+.boas-vindas h1 {
+
+    font-size: 38px;
+
+    line-height: 1.15;
+
+    color: var(--texto);
+
+    margin-bottom: 10px;
+
+}
+
+
+.boas-vindas p {
+
+    color: var(--texto-secundario);
+
+    font-size: 17px;
+
+    line-height: 1.6;
+
+}
+
+
+/* =========================================================
+   INDICADORES
+   ========================================================= */
+
+.indicadores {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 24px;
+
+    margin-top: 38px;
+
+}
+
+
+/* CARD */
+
+.card {
+
+    background:
+        var(--branco);
+
+    padding: 26px;
+
+    border-radius:
+        var(--raio);
+
+    box-shadow:
+        var(--sombra);
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    min-height: 135px;
+
+    border:
+        1px solid rgba(226, 232, 240, 0.8);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+
+}
+
+
+.card:hover {
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        var(--sombra-hover);
+
+}
+
+
+/* ÍCONE DOS CARDS */
+
+.card-icone {
+
+    width: 55px;
+
+    height: 55px;
+
+    border-radius: 14px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 25px;
+
+    flex-shrink: 0;
+
+}
+
+
+/* CORES DOS ÍCONES */
+
+.card-conhecimentos .card-icone {
+
+    background:
+        var(--azul-claro);
+
+}
+
+
+.card-processos .card-icone {
+
+    background:
+        #f1f5f9;
+
+}
+
+
+.card-riscos .card-icone {
+
+    background:
+        var(--vermelho-claro);
+
+}
+
+
+/* CONTEÚDO */
+
+.card-conteudo {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+/* NÚMERO */
+
+.numero {
+
+    font-size: 34px;
+
+    font-weight: 700;
+
+    color: var(--texto);
+
+    line-height: 1;
+
+}
+
+
+/* DESCRIÇÃO */
+
+.descricao {
+
+    margin-top: 8px;
+
+    color:
+        var(--texto-secundario);
+
+    font-size: 15px;
+
+}
+
+
+/* =========================================================
+   ALERTA DE RISCO
+   ========================================================= */
+
+.alerta {
+
+    margin-top: 32px;
+
+    background:
+        var(--branco);
+
+    padding:
+        30px 32px;
+
+    border-radius:
+        20px;
+
+    border-left:
+        7px solid var(--vermelho);
+
+    box-shadow:
+        var(--sombra);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 30px;
+
+}
+
+
+/* TAG */
+
+.tag {
+
+    display: inline-block;
+
+    color:
+        var(--vermelho);
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.5px;
+
+    margin-bottom: 4px;
+
+}
+
+
+/* TÍTULO DO ALERTA */
+
+.alerta h2 {
+
+    margin:
+        8px 0;
+
+    font-size: 24px;
+
+    color: var(--texto);
+
+}
+
+
+/* DESCRIÇÃO */
+
+.alerta p {
+
+    color:
+        var(--texto-secundario);
+
+    max-width: 700px;
+
+    font-size: 16px;
+
+    line-height: 1.5;
+
+}
+
+
+/* =========================================================
+   BOTÕES
+   ========================================================= */
+
+button {
+
+    border: none;
+
+    cursor: pointer;
+
+    padding:
+        14px 22px;
+
+    border-radius:
+        11px;
+
+    font-weight: 700;
+
+    font-size: 15px;
+
+    transition:
+        all 0.2s ease;
+
+}
+
+
+button:hover {
+
+    transform:
+        translateY(-1px);
+
+}
+
+
+button:active {
+
+    transform:
+        translateY(0);
+
+}
+
+
+button:disabled {
+
+    opacity: 0.6;
+
+    cursor: not-allowed;
+
+}
+
+
+/* BOTÃO DO ALERTA */
+
+.alerta button {
+
+    background:
+        #202124;
+
+    color:
+        white;
+
+    white-space:
+        nowrap;
+
+}
+
+
+.alerta button:hover {
+
+    background:
+        var(--azul-omni);
+
+}
+
+
+/* =========================================================
+   ÁREA DE AÇÕES
+   ========================================================= */
+
+.acoes {
+
+    display: flex;
+
+    gap: 16px;
+
+    margin-top: 36px;
+
+}
+
+
+/* BOTÃO PRINCIPAL */
+
+.botao-principal {
+
+    background:
+        var(--azul-omni);
+
+    color:
+        white;
+
+    font-size: 16px;
+
+    box-shadow:
+        0 5px 15px rgba(23, 59, 99, 0.18);
+
+}
+
+
+.botao-principal:hover {
+
+    background:
+        var(--azul-escuro);
+
+}
+
+
+/* BOTÃO SECUNDÁRIO */
+
+.botao-secundario {
+
+    background:
+        white;
+
+    color:
+        var(--texto);
+
+    border:
+        1px solid var(--borda);
+
+    font-size: 16px;
+
+}
+
+
+.botao-secundario:hover {
+
+    border-color:
+        var(--azul-omni);
+
+    color:
+        var(--azul-omni);
+
+}
+
+
+/* =========================================================
+   TELAS INTERNAS
+   ========================================================= */
+
+.tela {
+
+    animation:
+        aparecer 0.3s ease;
+
+}
+
+
+/* BOTÃO VOLTAR */
+
+.voltar {
+
+    background:
+        transparent;
+
+    padding:
+        0;
+
+    margin-bottom:
+        25px;
+
+    color:
+        var(--texto-secundario);
+
+    font-weight:
+        600;
+
+}
+
+
+.voltar:hover {
+
+    color:
+        var(--azul-omni);
+
+    transform:
+        translateX(-3px);
+
+}
+
+
+/* TÍTULOS INTERNOS */
+
+.tela > h1 {
+
+    font-size:
+        34px;
+
+    color:
+        var(--texto);
+
+}
+
+
+/* SUBTÍTULO */
+
+.subtitulo {
+
+    color:
+        var(--texto-secundario);
+
+    margin-top:
+        9px;
+
+    font-size:
+        16px;
+
+    line-height:
+        1.6;
+
+}
+
+
+/* =========================================================
+   FORMULÁRIO
+   ========================================================= */
+
+.formulario {
+
+    background:
+        var(--branco);
+
+    padding:
+        34px;
+
+    border-radius:
+        20px;
+
+    margin-top:
+        30px;
+
+    box-shadow:
+        var(--sombra);
+
+    border:
+        1px solid rgba(226, 232, 240, 0.8);
+
+}
+
+
+/* LABEL */
+
+.formulario label {
+
+    display:
+        block;
+
+    font-weight:
+        700;
+
+    margin-top:
+        20px;
+
+    margin-bottom:
+        9px;
+
+    color:
+        var(--texto);
+
+}
+
+
+.formulario label:first-child {
+
+    margin-top:
+        0;
+
+}
+
+
+/* INPUT E TEXTAREA */
+
+.formulario input,
+.formulario textarea {
+
+    width:
+        100%;
+
+    border:
+        1px solid var(--borda);
+
+    border-radius:
+        11px;
+
+    padding:
+        15px;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size:
+        15px;
+
+    color:
+        var(--texto);
+
+    background:
+        #fbfcfe;
+
+    outline:
+        none;
+
+    transition:
+        border 0.2s ease,
+        box-shadow 0.2s ease;
+
+}
+
+
+/* FOCO */
+
+.formulario input:focus,
+.formulario textarea:focus {
+
+    border-color:
+        var(--azul-omni);
+
+    background:
+        white;
+
+    box-shadow:
+        0 0 0 3px rgba(23, 59, 99, 0.08);
+
+}
+
+
+/* TEXTAREA */
+
+.formulario textarea {
+
+    min-height:
+        180px;
+
+    resize:
+        vertical;
+
+    line-height:
+        1.6;
+
+}
+
+
+/* =========================================================
+   CONTADOR
+   ========================================================= */
+
+.contador {
+
+    text-align:
+        right;
+
+    color:
+        #94a3b8;
+
+    font-size:
+        12px;
+
+    margin-top:
+        6px;
+
+}
+
+
+/* =========================================================
+   BOTÃO IA
+   ========================================================= */
+
+.botao-ia {
+
+    margin-top:
+        25px;
+
+    width:
+        100%;
+
+}
+
+
+/* =========================================================
+   DIVISOR
+   ========================================================= */
+
+.divisor {
+
+    text-align:
+        center;
+
+    margin:
+        28px 0;
+
+    color:
+        #94a3b8;
+
+    position:
+        relative;
+
+}
+
+
+.divisor span {
+
+    background:
+        white;
+
+    padding:
+        0 12px;
+
+    position:
+        relative;
+
+    z-index:
+        1;
+
+}
+
+
+.divisor::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    left:
+        0;
+
+    right:
+        0;
+
+    top:
+        50%;
+
+    height:
+        1px;
+
+    background:
+        var(--borda);
+
+}
+
+
+/* =========================================================
+   BOTÃO DE ÁUDIO
+   ========================================================= */
+
+.botao-audio {
+
+    width:
+        100%;
+
+    background:
+        #f1f5f9;
+
+    color:
+        var(--texto);
+
+    font-size:
+        16px;
+
+}
+
+
+.botao-audio:hover {
+
+    background:
+        var(--azul-claro);
+
+    color:
+        var(--azul-omni);
+
+}
+
+
+/* BOTÃO GRAVAR */
+
+.botao-gravar {
+
+    width:
+        100%;
+
+    margin-top:
+        20px;
+
+    background:
+        #f1f5f9;
+
+    color:
+        var(--texto);
+
+}
+
+
+.botao-gravar:hover {
+
+    background:
+        var(--azul-claro);
+
+}
+
+
+/* STATUS DA GRAVAÇÃO */
+
+#statusGravacao {
+
+    margin-top:
+        12px;
+
+    font-size:
+        14px;
+
+    color:
+        var(--texto-secundario);
+
+}
+
+
+/* =========================================================
+   RESULTADO DA IA
+   ========================================================= */
+
+.resultado-card {
+
+    background:
+        var(--branco);
+
+    margin-top:
+        30px;
+
+    padding:
+        34px;
+
+    border-radius:
+        20px;
+
+    box-shadow:
+        var(--sombra);
+
+    border:
+        1px solid rgba(226, 232, 240, 0.8);
+
+}
+
+
+.resultado-card h2 {
+
+    margin:
+        12px 0;
+
+    font-size:
+        26px;
+
+}
+
+
+.resultado-card h3 {
+
+    margin-top:
+        28px;
+
+    margin-bottom:
+        10px;
+
+    color:
+        var(--texto);
+
+}
+
+
+.especialista {
+
+    color:
+        var(--texto-secundario);
+
+}
+
+
+.resultado-card hr {
+
+    border:
+        none;
+
+    border-top:
+        1px solid var(--borda);
+
+    margin:
+        25px 0;
+
+}
+
+
+/* LISTA DE PROCEDIMENTOS */
+
+.resultado-card ol {
+
+    padding-left:
+        25px;
+
+}
+
+
+.resultado-card li {
+
+    margin:
+        12px 0;
+
+    color:
+        #475569;
+
+    line-height:
+        1.5;
+
+}
+
+
+/* =========================================================
+   EXCEÇÃO
+   ========================================================= */
+
+.excecao {
+
+    background:
+        var(--vermelho-claro);
+
+    border-left:
+        4px solid var(--vermelho);
+
+    padding:
+        16px;
+
+    border-radius:
+        9px;
+
+    color:
+        #7f1d1d;
+
+    line-height:
+        1.5;
+
+}
+
+
+/* =========================================================
+   RESPOSTA DA MEMÓRIA
+   ========================================================= */
+
+.resposta {
+
+    margin-top:
+        25px;
+
+    background:
+        var(--azul-claro);
+
+    padding:
+        22px;
+
+    border-radius:
+        15px;
+
+    line-height:
+        1.7;
+
+    border-left:
+        4px solid var(--azul-omni);
+
+}
+
+
+/* =========================================================
+   ANIMAÇÃO
+   ========================================================= */
+
+@keyframes aparecer {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(10px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+    .topbar {
+
+        padding:
+            0 4%;
+
+    }
+
+
+    .logo {
+
+        font-size:
+            17px;
+
+    }
+
+
+    .logo img {
+
+        height:
+            44px;
+
+    }
+
+
+    .indicadores {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .alerta {
+
+        flex-direction:
+            column;
+
+        align-items:
+            flex-start;
+
+    }
+
+
+    .alerta button {
+
+        width:
+            100%;
+
+    }
+
+}
+
+
+/* =========================================================
+   CELULAR
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .topbar {
+
+        height:
+            auto;
+
+        min-height:
+            76px;
+
+        padding:
+            12px 5%;
+
+    }
+
+
+    .logo {
+
+        gap:
+            10px;
+
+        font-size:
+            14px;
+
+    }
+
+
+    .logo img {
+
+        height:
+            40px;
+
+        max-width:
+            65px;
+
+    }
+
+
+    .nome-usuario {
+
+        display:
+            none;
+
+    }
+
+
+    .container {
+
+        width:
+            90%;
+
+        margin:
+            35px auto;
+
+    }
+
+
+    .boas-vindas h1 {
+
+        font-size:
+            29px;
+
+    }
+
+
+    .boas-vindas p {
+
+        font-size:
+            15px;
+
+    }
+
+
+    .acoes {
+
+        flex-direction:
+            column;
+
+    }
+
+
+    .acoes button {
+
+        width:
+            100%;
+
+    }
+
+
+    .formulario {
+
+        padding:
+            22px;
+
+    }
+
+
+    .resultado-card {
+
+        padding:
+            24px;
+
+    }
+
+
+    .tela > h1 {
+
+        font-size:
+            28px;
+
+    }
+
+}
+
+/* =========================================================
+   RECOMENDAÇÃO
+   ========================================================= */
+
+.recomendacao {
+
+    background:
+        var(--verde-claro);
+
+    border-left:
+        4px solid var(--verde);
+
+    padding:
+        16px;
+
+    border-radius:
+        9px;
+
+    color:
+        #166534;
+
+    line-height:
+        1.5;
+
+}
+
+/* =========================================================
+   PROCESSOS
+   ========================================================= */
+
+.secao-processos {
+
+    margin-top: 36px;
+
+}
+
+
+.cabecalho-secao {
+
+    margin-bottom: 18px;
+
+}
+
+
+.cabecalho-secao h2 {
+
+    margin-bottom: 6px;
+
+}
+
+
+.cabecalho-secao p {
+
+    color: #64748b;
+
+}
+
+
+.lista-processos {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+
+}
+
+
+.processo-card {
+
+    background: #ffffff;
+
+    border-radius: 18px;
+
+    padding: 26px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 30px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(15, 23, 42, 0.06);
+
+    border-left: 5px solid #ef4444;
+
+}
+
+
+.processo-conteudo {
+
+    flex: 1;
+
+}
+
+
+.processo-card h2 {
+
+    margin:
+        10px 0;
+
+    color:
+        #0f172a;
+
+}
+
+
+.risco-processo {
+
+    color:
+        #475569;
+
+    margin-bottom:
+        20px;
+
+}
+
+
+.processo-acoes {
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+.botao-consultar {
+
+    border: none;
+
+    background:
+        #202124;
+
+    color:
+        white;
+
+    padding:
+        13px 20px;
+
+    border-radius:
+        10px;
+
+    font-weight:
+        700;
+
+    cursor:
+        pointer;
+
+}
+
+
+.botao-consultar:hover {
+
+    opacity:
+        0.9;
+
+}
+
+/* =========================================================
+   CONCENTRAÇÃO
+   ========================================================= */
+
+.concentracao {
+
+    margin-top:
+        18px;
+
+}
+
+
+.concentracao-topo {
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    margin-bottom:
+        8px;
+
+    font-size:
+        14px;
+
+}
+
+
+.concentracao-topo strong {
+
+    font-size:
+        18px;
+
+}
+
+
+.barra-concentracao {
+
+    width:
+        100%;
+
+    height:
+        9px;
+
+    background:
+        #e5e7eb;
+
+    border-radius:
+        20px;
+
+    overflow:
+        hidden;
+
+}
+
+
+.barra-concentracao-preenchida {
+
+    height:
+        100%;
+
+    background:
+        #ef4444;
+
+    border-radius:
+        20px;
+
+}
+
+
+.concentracao small {
+
+    display:
+        block;
+
+    margin-top:
+        7px;
+
+    color:
+        #94a3b8;
+
+}
+
+
+.quantidade-conhecimentos {
+
+    margin-top:
+        15px;
+
+    color:
+        #64748b;
+
+    font-size:
+        14px;
+
+}
+
+.risco-alto {
+
+    color:
+        #dc2626;
+
+}
+
+
+.risco-medio {
+
+    color:
+        #d97706;
+
+}
+
+
+.risco-baixo {
+
+    color:
+        #16a34a;
+
+}
+
+.risco-alto {
+
+    color:
+        #dc2626;
+
+}
+
+
+.risco-medio {
+
+    color:
+        #d97706;
+
+}
+
+
+.risco-baixo {
+
+    color:
+        #16a34a;
+
+}
+
+/* =========================================================
+   BASE DE CONHECIMENTOS
+   ========================================================= */
+
+.busca-conhecimentos {
+
+    display:
+        flex;
+
+    gap:
+        12px;
+
+    margin:
+        25px 0;
+
+}
+
+
+.busca-conhecimentos input {
+
+    flex:
+        1;
+
+    padding:
+        15px 18px;
+
+    border:
+        1px solid #d1d5db;
+
+    border-radius:
+        10px;
+
+    font-size:
+        16px;
+
+}
+
+
+.lista-conhecimentos {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        16px;
+
+}
+
+
+.conhecimento-card {
+
+    background:
+        #ffffff;
+
+    border-radius:
+        16px;
+
+    padding:
+        24px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(15, 23, 42, 0.06);
+
+}
+
+
+.conhecimento-card h2 {
+
+    margin:
+        10px 0;
+
+    color:
+        #0f172a;
+
+}
+
+
+.conhecimento-card p {
+
+    color:
+        #475569;
+
+    line-height:
+        1.5;
+
+}
+
+
+.data-conhecimento {
+
+    font-size:
+        13px;
+
+    color:
+        #94a3b8 !important;
+
+}
+
+
+.conhecimento-acoes {
+
+    display:
+        flex;
+
+    gap:
+        10px;
+
+    margin-top:
+        20px;
+
+    flex-wrap:
+        wrap;
+
+}
+
+.estado-vazio {
+
+    background:
+        #ffffff;
+
+    padding:
+        40px;
+
+    border-radius:
+        16px;
+
+    text-align:
+        center;
+
+    color:
+        #64748b;
+
+}
+
+
+.estado-erro {
+
+    background:
+        #fef2f2;
+
+    border:
+        1px solid #fecaca;
+
+    color:
+        #b91c1c;
+
+    padding:
+        20px;
+
+    border-radius:
+        12px;
+
+}
+
+.recomendacao {
+
+    background:
+        #f0fdf4;
+
+    border-left:
+        4px solid #16a34a;
+
+    padding:
+        16px;
+
+    border-radius:
+        10px;
+
+    color:
+        #166534;
+
+    line-height:
+        1.5;
+
+}
+
+@media (max-width: 800px) {
+
+    .processo-card {
+
+        flex-direction:
+            column;
+
+        align-items:
+            stretch;
+
+    }
+
+
+    .processo-acoes {
+
+        justify-content:
+            flex-start;
+
+    }
+
+
+    .busca-conhecimentos {
+
+        flex-direction:
+            column;
+
+    }
+
+}

@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>OMNI CONHECIMENTO PATRIMONIAL</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+
+    <div class="logo">
+
+        <img src="src/logoomni.jpg" alt="OMNI">
+
+        <span>OMNI CONHECIMENTO PATRIMONIAL</span>
+
+    </div>
+
+    <div class="usuario">
+
+        <span class="nome-usuario">
+            Gabryel
+        </span>
+
+        <span class="avatar-usuario">
+            G
+        </span>
+
+    </div>
+
+</header>
+
+
+    <main class="container">
+
+
+<!-- DASHBOARD -->
+
+    <section id="dashboard">
+
+        <section class="boas-vindas">
+
+            <h1>
+                Olá, Gabryel 👋
+            </h1>
+
+            <p>
+                Transformando experiência e conhecimento
+                em patrimônio da empresa.
+            </p>
+
+        </section>
+
+
+        <!-- INDICADORES -->
+
+        <section class="indicadores">
+
+            <div class="card">
+
+                <span
+                    class="numero"
+                    id="totalConhecimentos">
+
+                    0
+
+                </span>
+
+                <span class="descricao">
+                    Conhecimentos 🧠
+                </span>
+
+            </div>
+
+
+            <div class="card">
+
+                <span
+                    class="numero"
+                    id="totalProcessos">
+
+                    0
+
+                </span>
+
+                <span class="descricao">
+                    Processos ⚙️
+                </span>
+
+            </div>
+
+
+            <div class="card">
+
+                <span
+                    class="numero"
+                    id="totalRiscos">
+
+                    0
+
+                </span>
+
+                <span class="descricao">
+                    Riscos críticos ⚠️
+                </span>
+
+            </div>
+
+        </section>
+
+
+    <!-- PROCESSOS -->
+
+    <section class="secao-processos">
+
+        <div class="cabecalho-secao">
+
+            <div>
+
+                <h2>
+                    Processos registrados
+                </h2>
+
+                <p>
+                    Acompanhe os processos que possuem
+                    conhecimento registrado.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div
+            id="listaProcessos"
+            class="lista-processos">
+
+            <div class="estado-vazio">
+
+                Carregando processos...
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- AÇÕES -->
+
+    <section class="acoes">
+
+        <button
+            class="botao-principal"
+            onclick="abrirRegistro()">
+
+            + Registrar conhecimento
+
+        </button>
+
+
+        <button
+            class="botao-secundario"
+            onclick="abrirPerguntaGeral()">
+
+            🧠 Perguntar à memória
+
+        </button>
+
+
+        <button
+            class="botao-secundario"
+            onclick="abrirBaseConhecimentos()">
+
+            📚 Base de Conhecimentos
+
+        </button>
+
+    </section>
+
+</section>
+
+
+
+        <!-- REGISTRAR CONHECIMENTO -->
+
+        <section id="registro" class="tela" style="display:none;">
+
+            <button
+                class="voltar"
+                onclick="voltarDashboard()">
+
+                ← Voltar
+
+            </button>
+
+
+            <h1>
+                Compartilhe sua experiência
+            </h1>
+
+            <p class="subtitulo">
+
+                Conte algo que você sabe e que outra pessoa
+                precisaria aprender.
+
+            </p>
+
+
+            <div class="formulario">
+
+                <label>
+                    Título do conhecimento
+                </label>
+
+                <input
+                    id="titulo"
+                    type="text"
+                    placeholder="Ex: Manutenção da Máquina X">
+
+
+                <label>
+                    Conte sua experiência
+                </label>
+
+                <textarea
+                    id="conhecimento"
+                    placeholder="Explique como você realiza esse processo, cuidados, exceções ou problemas que podem acontecer...">
+                </textarea>
+
+
+                <div class="contador">
+
+                    <span id="contador">
+                        0 caracteres
+                    </span>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="btnGravar"
+                    class="botao-gravar">
+                     🎤 Gravar Experiência
+                </button>
+
+                <p id="statusGravacao"></p>
+
+                <button
+                    type="button"
+                    id="btnAnalisarAudio"
+                    onclick="analisarAudio()"
+                >
+                📝 Transcrever o aúdio
+                </button>
+
+                <button
+                    class="botao-principal botao-ia"
+                    onclick="analisarConhecimento()">
+
+                    🧠 Analisar com a OMNI
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- RESULTADO DA IA -->
+
+        <section
+            id="resultado"
+            class="tela"
+            style="display:none;">
+
+            <button
+                class="voltar"
+                onclick="voltarRegistro()">
+
+                ← Voltar
+
+            </button>
+
+
+            <h1>
+                🧠 Conhecimento identificado
+            </h1>
+
+
+            <div class="resultado-card">
+
+                <span class="tag">
+                    CONHECIMENTO PROCESSADO
+                </span>
+
+
+                <h2 id="resultadoTitulo">
+                    Manutenção da Máquina X
+                </h2>
+
+
+                <p class="especialista">
+                    👤 Gabryel — Técnico
+                </p>
+
+
+                <hr>
+
+
+                <h3>
+                    Procedimento
+                </h3>
+
+                <ol id="resultadoPassos">
+
+                    <li>
+                        Aguardando análise...
+                    </li>
+
+                </ol>
+
+
+                <h3>
+                    ⚠️ Exceção identificada
+                </h3>
+
+                <div
+                    id="resultadoExcecao"
+                    class="excecao">
+
+                    Aguardando análise...
+
+                </div>
+
+
+                <h3>
+                    Risco
+                </h3>
+
+                <p id="resultadoRisco">
+
+                    Aguardando análise...
+
+                </p>
+
+                <h3>
+                        💡 Recomendação
+                </h3>
+
+                <div
+                    id="resultadoRecomendacao"
+                    class="recomendacao">
+
+                    Aguardando análise...
+
+                </div>
+
+
+                <button
+                    class="botao-principal"
+                    onclick="salvarConhecimento()">
+
+                    ✓ Salvar na memória
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- PERGUNTAR -->
+
+        <section
+            id="pergunta"
+            class="tela"
+            style="display:none;">
+
+            <button
+                class="voltar"
+                onclick="voltarDashboard()">
+
+                ← Voltar
+
+            </button>
+
+            <h1>
+                🧠 Consultar a Base - OMNI
+            </h1>
+
+
+            <div class="processo-selecionado">
+
+                <span>
+                    Processo selecionado
+                </span>
+
+                <strong
+                    id="tituloProcessoPergunta">
+
+                    Nenhum processo selecionado
+
+                </strong>
+
+            </div>
+
+
+            <p class="subtitulo">
+
+                Faça uma pergunta exclusivamente sobre
+                o conhecimento deste processo.
+
+            </p>
+
+
+            <div class="formulario">
+
+                <textarea
+                    id="perguntaTexto"
+                    placeholder="Ex: O que faço se a máquina piscar três vezes?">
+                </textarea>
+
+
+                <button
+                    class="botao-principal"
+                    onclick="responderPergunta()">
+
+                    Perguntar
+
+                </button>
+
+
+                <div
+                    id="resposta"
+                    class="resposta"
+                    style="display:none;">
+
+                </div>
+
+            </div>
+
+        </section>
+
+    <!-- =====================================================
+        BASE DE CONHECIMENTOS
+    ===================================================== -->
+
+    <section
+        id="baseConhecimentos"
+        class="tela"
+        style="display:none;">
+
+        <button
+            class="voltar"
+            onclick="voltarDashboard()">
+
+            ← Voltar
+
+        </button>
+
+
+        <h1>
+            📚 Base de Conhecimentos
+        </h1>
+
+
+        <p class="subtitulo">
+
+            Consulte todo o conhecimento registrado
+            na empresa.
+
+        </p>
+
+
+        <div class="busca-conhecimentos">
+
+            <input
+                id="campoBuscaConhecimentos"
+                type="text"
+                placeholder="🔎 Buscar conhecimento, processo, risco..."
+            >
+
+            <button
+                class="botao-principal"
+                onclick="buscarConhecimentos()">
+
+                Buscar
+
+            </button>
+
+        </div>
+
+
+        <div
+            id="listaConhecimentos"
+            class="lista-conhecimentos">
+
+            <div class="estado-vazio">
+
+                Carregando conhecimentos...
+
+            </div>
+
+        </div>
+
+    </section>
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
